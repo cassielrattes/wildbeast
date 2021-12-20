@@ -17,6 +17,8 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
+  border-radius: 5px;
 }
 
 /* GRID GERAL */
@@ -45,19 +47,80 @@ img {
   max-width: 200px;
 }
 
-.sidenav {
-  grid-area: sidenav;
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.header nav a {
+  display: block;
+  padding: 10px;
+  color:#fff;
+  font-size: 1.125em;
+  background:rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  transition: .1s;
+}
+
+.header nav a:hover {
+  background: rgba(0, 0, 0, .5);
+}
+
+.header li + li {
+  margin-left: 30px;
+}
+
+/* SIDENAV */
+
+.sidenav {
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: .1s ease-out;
+}
+
+.sidenav li a:hover {
+  background: #b07dfb;
+}
+
+/* CONTENT */
 
 .content {
   grid-area: content;
 }
 
+/* ANUNCIOS */
+
 .anuncios {
   grid-area: anuncios;
+  display: grid;
+  background: #fafbfc;
+  grid-template-rows: 250px 250px;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
 }
 
+/* FOOTER */
+
 .footer {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
   grid-area: footer;
+}
+
+.footer p {
+  text-align: center;
+  padding: 30px;
+  color:#fff;
 }
